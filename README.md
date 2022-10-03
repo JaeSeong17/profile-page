@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Profile-Page toy project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+학습한 javascript와 react를 기반으로 프로필 페이지를 제작합니다.
+지금까지 해온 프로젝트와 경험한 내용을 담습니다.
 
-## Available Scripts
 
-In the project directory, you can run:
+## React
 
-### `yarn start`
+Static SPA로 프로젝트를 구성합니다.
+LandingPage, MainPage, ProjectDetailPage 등으로 구상중입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## GSAP
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+애니메이션 라이브러리를 사용해 보겠습니다.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 프로젝트 기록
+### 인도 인턴쉽 - WebOS
 
-### `yarn build`
+기간: 1개월, 교육이수 후 팀별 자유 과제 구현, 해커톤 방식 진행 (입상 X)
+tensorflow.js(YOLO model)의 사물감지를 활용한 '필요 물품 확인 시스템' 구현, 모델 사용 및 프론트와 연동
+Raspberri pi 4에 WebOS설치, 웹앱이 동작 가능하여 스크립트 기반 프로젝트 기획
+firebase에 사용자가 챙겨야 할 물건을 등록 -> 이후 외출시 문에 설치된 카메라를 통해 체크 리스트 확인후 사용자에게 알림
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+처음에 tensorflow 모델을 직접 라즈베리파이에 올리려 했으나 용량 및 연산 능력 부족, 호환 문제로 실패
+이후 js로 전환하여 가까스로 구현에 성공했으나 사물감지 모델을 그대로 사용(직접 학습X), 완성도 부족으로 입상에는 실패 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### SJSU software educate program - Petmily
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+기간: 1개월, 비즈니스 모델 구상에 초점을 맞춘 서비스 제안서 제출 (입상 O)
+반려동물 사료 후기 데이터에 기반한 기호 맞춤 사료 추천 서비스
+Flutter 사용(개발 기간 짧음 고려), 어플리케이션 프론트 엔드 담당
+비즈니스 모델에 초점을 맞춘 프로그램이라 어플리케이션 완성도는 떨어지나 서비스 출시 과정을 경험해볼 수 있었음
 
-### `yarn eject`
+### 교내(졸업) 프로젝트 - PHM
+기간: 3~4개월
+장치로부터 발생하는 데이터에 기반하여 고장 시점을 예측하는 시스템
+python(tensorflow), c++ 사용, 모델 적용 담당
+실시간으로 데이터를 활용하여 LSTM 모델을 사용
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 교내 프로젝트 - 오프라인 채팅
+기간: 3개월
+인터넷 망 연결 없이 근거리 통신을 통한 채팅 시스템 개발
+react 사용, 프론트엔드 담당
+모바일, 데스크탑 환경을 모두 고려하여 웹 브라우저 기반 웹앱으로 만들면 가능하다고 판단
+브라우저 상에서 로컬 파일 직접 접근 불가능함을 고려하지 못함
+react 미숙, 네트워크 지식 등 부족한 부분을 많이 느낀 프로젝트 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
