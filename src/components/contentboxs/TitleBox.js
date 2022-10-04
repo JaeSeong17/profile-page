@@ -36,7 +36,7 @@ const SvgContainer = styled.svg`
 
 
 const TitleBox = () => {
-    gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);    // 플러그인 사용시 등록 필요
+    gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);    // 플러그인 사용시 등록
     gsap.defaults({ease: "none"});
     const circleRef = useRef();
     const pathRef = useRef();
@@ -97,13 +97,14 @@ const TitleBox = () => {
     return (
         <Wrapper ref={wrapperRef}>
             <SvgContainer ref={svgRef} viewBox="14 0 20 10">
-                <text ref={textRef1} x="15" y="1.5">어려운 순간은 매번 찾아옵니다</text>
-                <text ref={textRef2} x="15" y="2.5">이 길이 맞나 헤메기도 합니다</text>
-                <text ref={textRef3} x="28" y="7.5">하지만 될때까지 하다보면</text>
-                <text ref={textRef4} x="28" y="8.5">또 다시 나아갈 수 있겠죠</text>
-                <text ref={textRef5} x="21" y="10">기우제는 실패하지 않으니까요</text>
+                <text ref={textRef1} className='text' x="15" y="1.5">어려운 순간은 매번 찾아옵니다</text>
+                <text ref={textRef2} className='text' x="15" y="2.5">이 길이 맞나 헤메기도 합니다</text>
+                <text ref={textRef3} className='text' x="28" y="7.5">하지만 될때까지 하다보면</text>
+                <text ref={textRef4} className='text' x="28" y="8.5">또 다시 나아갈 수 있겠죠</text>
+                <text ref={textRef5} className='text' x="21.5" y="10">기우제는 실패하지 않으니까요</text>
                 <path 
                     ref={pathRef}
+                    className='line'
                     d="m 0.036 5.029
                     C 32.5 6.25 17.5 -1.25 22.5 5 C 26.25
                     10 27.5 3.75 23.75 1.25 C 20 0 32.5
