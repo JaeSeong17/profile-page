@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     min-height: 100vh;
     min-width: 100%;
     background-color: white;
-    z-index: 1;
+    z-index: 10;
 `;
 const TitleText = styled.div`
     position: absolute;
