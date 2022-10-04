@@ -8,10 +8,13 @@
 
 Static SPA로 프로젝트를 구성합니다.
 LandingPage, MainPage, ProjectDetailPage 등으로 구상중입니다.
+- LandingPage에서 Navigate로 url을 바꾸는 방식에서 MainPage에서 컴포넌트로 올리는 방식으로 변경
 
-## GSAP
 
-애니메이션 라이브러리를 사용해 보겠습니다.
+## GSAP - 애니메이션 라이브러리
+### ScrollTrigger
+
+스크롤 반응 애니메이션 사용
 
 
 ## 프로젝트 기록

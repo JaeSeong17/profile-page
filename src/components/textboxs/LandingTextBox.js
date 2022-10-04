@@ -1,14 +1,16 @@
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 100%;
+    background-color: white;
+    z-index: 1;
 `;
 const TitleText = styled.div`
     position: absolute;
@@ -27,9 +29,9 @@ const SubText = styled.div`
 const DetailText = styled.div`
     position: absolute;
     display: inline-block;
-    right: 0;
+    right: 20%;
     bottom: 14%;
-    font-size: 1rem;
+    font-size: 0.6rem;
     text-align: end;
 `;
 const Screen = styled.div`
@@ -43,9 +45,8 @@ const Screen = styled.div`
 `;
 
 const LandingTextBox = () => {
-    const navigate = useNavigate();
-
-    const title = '홈페이지 만들기 줫나 어렵네';
+    const [landing, setLanding] = useState(true);
+    const title = '기우제는 실패하지 않는다';
     const splitTitle = "<div>" + title.split("").join("</div><div>&nbsp;</div><div>") + "</div>";
     const titleRef = useRef();
     const titleGsap = gsap.utils.selector(titleRef);
@@ -54,9 +55,10 @@ const LandingTextBox = () => {
     const subRef = useRef();
 
     const mail = 'dktmzh6@gmail.com';
-    const date = '@2022 하반기';
+    const date = 'copyright dktmzh6 @2022 하반기';
     const detailRef = useRef();
 
+    const wrapperRef = useRef();
 
     useEffect(() => {
         gsap.timeline()
@@ -71,11 +73,16 @@ const LandingTextBox = () => {
             opacity: 0
         });
 
-        setTimeout(() => navigate('/main', true), 4000);
+        setTimeout(() => {
+            gsap.to(wrapperRef.current, {
+                opacity: 0,
+                duration: 1
+            });
+        }, 3000);
     }, [])
 
     return (
-        <Wrapper>
+        <Wrapper ref={wrapperRef}>
             <TitleText ref={titleRef} dangerouslySetInnerHTML={{__html: splitTitle}}/>
             <Screen />
             <SubText ref={subRef}>{sub}</SubText>
