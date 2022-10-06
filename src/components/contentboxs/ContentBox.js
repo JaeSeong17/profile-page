@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import palette from "../../lib/styles/palette";
 import gsap from "gsap";
 import { ScrollTrigger} from "gsap/all";
 import { useEffect, useRef } from "react";
+import ImageSlider from "./ImageSlider";
 
 const Wrapper = styled.div`
     position: relative;
@@ -12,43 +12,26 @@ const Wrapper = styled.div`
     min-height: 600px;
     width: 100%;
     margin-bottom: 6rem;
-    background-color: ${palette.gray[4]};
     padding: 4rem;
 `;
 
 const ImageArea = styled.div`
-    background-color: ${palette.gray[7]};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20rem;
-    width: 25rem;
+    height: 30rem;
+    width: 32rem;
 `;
 const TextArea = styled.div`
-    background-color: ${palette.gray[5]};
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
     height: 15rem;
     width: 25rem;
 `;
 
-const ContentBox = ({value}) => {
+const ContentBox = ({content}) => {
     gsap.registerPlugin(ScrollTrigger);
     const imageRef = useRef();
     const textRef = useRef();
-
-    useEffect(() => {
-        gsap.from(imageRef.current,{
-            scrollTrigger: {
-                trigger: imageRef.current,
-                toggleActions: "restart none none reset"
-            },
-            x: -100,
-            duration: 1,
-            opacity: 0
-        });
-    }, [])
 
     useEffect(() => { 
         gsap.from(textRef.current, {
@@ -65,11 +48,17 @@ const ContentBox = ({value}) => {
 
     return (
         <Wrapper>
-            <ImageArea ref={imageRef}>
-                이미지 영역
+            <ImageArea>
+                <ImageSlider />
             </ImageArea>
             <TextArea ref={textRef}>
-                텍스트 영역 #{value}
+                <div>
+                    {content.title}
+                </div>
+                <hr />
+                <div>
+                    {content.text}
+                </div>
             </TextArea> 
         </Wrapper>
     )
