@@ -34,8 +34,6 @@ const MainClose = styled.div`
 
 `;
 
-
-
 const ImageSlider = () => {
     const lanes = [[
             {
@@ -108,7 +106,6 @@ const ImageSlider = () => {
             let b = mainBoxRef.current.children[i];
             if (b.classList.contains(classStr)) {
                 gsap.to(b.tl, {timeScale:0, ease:'sine'});
-                console.log(b); 
             }   
         }
     }
@@ -151,7 +148,7 @@ const ImageSlider = () => {
                         rotation: 0.05, 
                         ease:'none'
                     }
-                ).progress(((i*4)+j)%4/4);
+                ).progress(((i*4)+j)%4/4);      // 애니메이션 진행도를 설정할 수 있음
             })
         }, [])
         
