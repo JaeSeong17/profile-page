@@ -27,7 +27,7 @@ const ContentBox = ({data}) => {
             <ImageArea>
                 <ImageSlider />
             </ImageArea>
-            <TextBox data={data}/>
+            <TextBox data={data} gitBtn/>
         </Wrapper>
     )
 }

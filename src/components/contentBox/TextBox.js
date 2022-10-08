@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import Button from "../common/Button";
 
 const Wrapper = styled.div`
     display: block;
@@ -19,7 +20,7 @@ const Title = styled.div`
     font-size: 1.5rem;
 `;
 
-const TextBox = ({data}) => {
+const TextBox = ({data, gitBtn}) => {
     const wrapRef = useRef();
     const wrapGsap = gsap.utils.selector(wrapRef);
 
@@ -46,7 +47,7 @@ const TextBox = ({data}) => {
             {data.text.map((line, index) => (
                 <div key={index}>- {line}</div>
             ))}
-            
+            <div>{gitBtn && <Button text="To Git" path={data.github}/>}</div>
         </Wrapper>
     );
 }

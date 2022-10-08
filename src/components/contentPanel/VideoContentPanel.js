@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import TextBox from "../contentBox/TextBox";
 import gsap from "gsap";
+import Button from "../common/Button";
 
 const Wrapper = styled.div`
     position: relative;
@@ -46,7 +47,7 @@ const VideoContentPanel = ({data}) => {
 
     return (
         <Wrapper>
-            <TextBox data={data}/>
+            <TextBox data={data} gitBtn/>
             <VideoArea ref={imgRef}>
                 <img async
                     src={require("../../static/images/unityGame/unity_project.gif")}
