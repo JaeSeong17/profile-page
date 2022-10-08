@@ -20,8 +20,7 @@ const MainBoxes = styled.div`
     height: 100%; */
     div {
         position:absolute;
-        box-shadow: 0px 0px 
-        40px rgba(0,0,10,0.25); 
+        box-shadow: 0px 0px 40px rgba(0,0,10,0.25); 
         /* background-color: ${palette.red[6]}; */
         opacity: 0;
         img {

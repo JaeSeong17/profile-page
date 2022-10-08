@@ -19,21 +19,15 @@ const Title = styled.div`
     font-size: 1.5rem;
 `;
 
-const Detail = styled.div`
-    
-`;
-
 const TextBox = ({data}) => {
     const wrapRef = useRef();
     const wrapGsap = gsap.utils.selector(wrapRef);
-
-    console.log("check", data);
 
     useEffect(() => { 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: wrapRef.current,
-                toggleActions: "restart none none reset",
+                toggleActions: "restart none none none",
             }
         })
         tl.from(wrapGsap("div"), {
