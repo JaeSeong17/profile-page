@@ -156,7 +156,7 @@ const ImageSlider = () => {
                 scrollTrigger:{
                     trigger: wrapperRef.current,
                     // markers: true,
-                    toggleActions: 'restart none none none'
+                    toggleActions: 'restart none none reset'
                 }
             })
             .set(wrapperRef.current,    {perspective:900})

@@ -37,7 +37,7 @@ const VideoContentPanel = ({data}) => {
         gsap.from(imgRef.current, {
             scrollTrigger:{
                 trigger: imgRef.current,
-                toggleActions: "restart none none none"
+                toggleActions: "restart none none reset"
             },
             opacity: 0,
             duration: 2
@@ -47,13 +47,13 @@ const VideoContentPanel = ({data}) => {
 
     return (
         <Wrapper>
-            <TextBox data={data} gitBtn/>
             <VideoArea ref={imgRef}>
                 <img async
-                    src={require("../../static/images/unityGame/unity_project.gif")}
-                    alt="unity game project"
+                    src={require("../../" + data.mediaPath)}
+                    alt={data.title}
                 />
             </VideoArea>
+            <TextBox data={data}/>
         </Wrapper>
     );
 }

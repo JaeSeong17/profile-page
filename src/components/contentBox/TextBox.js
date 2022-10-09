@@ -8,8 +8,6 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    height: 15rem;
-    width: 25rem;
 
     div {
         margin-bottom: 1rem;
@@ -20,7 +18,7 @@ const Title = styled.div`
     font-size: 1.5rem;
 `;
 
-const TextBox = ({data, gitBtn}) => {
+const TextBox = ({data}) => {
     const wrapRef = useRef();
     const wrapGsap = gsap.utils.selector(wrapRef);
 
@@ -47,7 +45,7 @@ const TextBox = ({data, gitBtn}) => {
             {data.text.map((line, index) => (
                 <div key={index}>- {line}</div>
             ))}
-            <div>{gitBtn && <Button text="To Git" path={data.github}/>}</div>
+            <div>{data.github && <Button text="To Git" path={data.github}/>}</div>
         </Wrapper>
     );
 }

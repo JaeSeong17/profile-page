@@ -7,11 +7,12 @@
             "Flutter",
             "어플리케이션 프론트 엔드 담당"
         ],
+        "mediaPath" : null,
         "github" : "https://github.com/Beyond-Six/Petmily_Flutter"
     },
     {
         "key":2,
-        "title": "India Internship - WebOS",
+        "title": "WebOS - India Internship",
         "text": [
             "사물감지를 활용한 '필요 물품 확인 시스템'",
             "tensorflow.js(YOLO model), Python",
@@ -19,25 +20,29 @@
             "Raspberri pi 4에 WebOS설치, 웹앱이 동작 가능하여 스크립트 기반 프로젝트 기획",
             "외출시 문에 설치된 카메라를 통해 등록된 체크 리스트 확인후 사용자에게 알림"
         ],
-        "github": ""
+        "mediaPath" : "static/images/webos/Produce.mp4",
+        "github": null
     },
     {
         "key":3,
-        "title": "교내(졸업) 프로젝트 - PHM",
+        "title": "PHM - 교내 프로젝트",
         "text": [
             "장치로부터 발생하는 데이터에 기반하여 고장 시점을 예측하는 시스템",
             "python(tensorflow), c++ 사용, 모델 적용 담당",
             "실시간으로 데이터를 활용하여 LSTM 모델을 사용"
         ],
+        "mediaPath": null,
+        "imgPath": "static/images/phm/",
         "github": "https://github.com/JaeSeong17/PHM_project"
     },
     {
         "key":4,
-        "title": "교내 프로젝트 - 오프라인 채팅",
+        "title": "Offline Chatting - 교내 프로젝트",
         "text": [
             "인터넷 망 연결 없이 근거리 통신을 통한 채팅 시스템 개발",
             "react 사용, 프론트엔드 담당"
         ],
+        "mediaPath" : "",
         "github": "https://github.com/knusslab/SW_Conv2"
     },
     {
@@ -48,6 +53,7 @@
             "Unity, C#, Aseprite",
             "소울 형 로그라이크 게임"
         ],
+        "mediaPath" : "static/images/unityGame/unity_project.gif",
         "github": "https://github.com/JaeSeong17/unity_project"
     },
     {
@@ -57,6 +63,7 @@
             "'리액트를 다루는 기술'을 읽고 따라서 시작해본 토이프로젝트",
             "블로그 기록 할거 이참에 내 블로그를 만들어 보자"
         ],
-        "github": ""
+        "mediaPath" : "",
+        "github": null
     }
 ]
