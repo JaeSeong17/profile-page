@@ -1,6 +1,6 @@
 [
     {
-        "key":1,
+        "key": "petmily",
         "title": "Petmily - SJSU SW program",
         "text": [
             "반려동물 기호 맞춤 사료 추천 서비스",
@@ -11,7 +11,7 @@
         "github" : "https://github.com/Beyond-Six/Petmily_Flutter"
     },
     {
-        "key":2,
+        "key": "webos",
         "title": "WebOS - India Internship",
         "text": [
             "사물감지를 활용한 '필요 물품 확인 시스템'",
@@ -24,10 +24,10 @@
         "github": null
     },
     {
-        "key":3,
+        "key": "phm",
         "title": "PHM - 교내 프로젝트",
         "text": [
-            "장치로부터 발생하는 데이터에 기반하여 고장 시점을 예측하는 시스템",
+            "고장 시점을 예측 시스템",
             "python(tensorflow), c++ 사용, 모델 적용 담당",
             "실시간으로 데이터를 활용하여 LSTM 모델을 사용"
         ],
@@ -36,28 +36,29 @@
         "github": "https://github.com/JaeSeong17/PHM_project"
     },
     {
-        "key":4,
+        "key": "offchat",
         "title": "Offline Chatting - 교내 프로젝트",
         "text": [
-            "인터넷 망 연결 없이 근거리 통신을 통한 채팅 시스템 개발",
+            "근거리 통신 채팅 시스템",
             "react 사용, 프론트엔드 담당"
         ],
-        "mediaPath" : "",
+        "mediaPath" : null,
+        "imgPath": "static/images/offchat/",
         "github": "https://github.com/knusslab/SW_Conv2"
     },
     {
-        "key":5,
+        "key": "unityGame",
         "title": "게임 개발 - Unity",
         "text": [
-            "내 게임이 만들어보고 싶어서 해보는 개인 개발",
+            "게임이 만들어보고 싶어서 해보는 개인 개발",
             "Unity, C#, Aseprite",
             "소울 형 로그라이크 게임"
         ],
-        "mediaPath" : "static/images/unityGame/unity_project.gif",
+        "mediaPath" : "static/images/unityGame/unityGame.mp4",
         "github": "https://github.com/JaeSeong17/unity_project"
     },
     {
-        "key":6,
+        "key": 6,
         "title": "React Toy - blog",
         "text": [
             "'리액트를 다루는 기술'을 읽고 따라서 시작해본 토이프로젝트",

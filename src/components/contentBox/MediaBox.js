@@ -3,12 +3,18 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 
 const Wrapper = styled.div`
+    position: relative;
+    width: 28rem; 
+    height: 16rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 40px rgba(0,0,10,0.5); 
     video {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        border-radius: 1rem;
-        box-shadow: 0px 0px 40px rgba(0,0,10,0.5); 
+        position: absolute;
+        width: 30rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 `;
 

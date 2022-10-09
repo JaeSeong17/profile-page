@@ -26,7 +26,7 @@ const Wrapper = styled.div`
             height: 16rem;
             width: 28rem;
             img {
-                height: 16rem;
+                height: 100%;
                 width: 28rem;
                 object-fit: contain;
             }
@@ -36,8 +36,8 @@ const Wrapper = styled.div`
 
 const ImageLotate = ({data}) => {
     const imgList = useRef(null);
-    let n = 0
-    const [index, setIndex] = useState(0)
+    let index = 0
+    const total = 2
     
 
     useEffect(() => {
@@ -51,27 +51,21 @@ const ImageLotate = ({data}) => {
     }, [])
 
     const nextSlide = () => {
-        if (n === 3){
+        if (index === total-1){
             [...imgList.current.children].map(item => {
-                gsap.to(item, 3, {x: `+=${28*3}rem`})
+                gsap.to(item, 3, {x: `+=${28*(total-1)}rem`})
             })
         }else{
             [...imgList.current.children].map(item => {
                 gsap.to(item, 3, {x: `-=${28}rem`})
             })
         }
-        n = (n + 1)%4;
+        index = (index + 1)%total ;
     }
     
     return (
         <Wrapper>
             <ul ref={imgList}>
-                <li>
-                    <img src={require('../../'+data.imgPath + 'phm1.png')} alt={data.title} />
-                </li>
-                <li>
-                    <img src={require('../../'+data.imgPath + "phm2.png")} alt={data.title} />
-                </li>
                 <li>
                     <img src={require('../../'+data.imgPath + "phm3.png")} alt={data.title} />
                 </li>

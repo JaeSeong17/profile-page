@@ -4,7 +4,7 @@ import { ScrollTrigger} from "gsap/all";
 import ImageSlider from "../contentBox/ImageSlider";
 import MediaBox from "../contentBox/MediaBox";
 import TextBox from "../contentBox/TextBox";
-import ImageLotate from "../contentBox/ImageLotate";
+import ImageShow from "components/contentBox/ImageShow";
 
 const Wrapper = styled.div`
     position: relative;
@@ -19,19 +19,20 @@ const Wrapper = styled.div`
 
 const ImageArea = styled.div`
     display: flex;
+    justify-content: center;
     align-items: center;
     height: 30rem;
     width: 32rem;
 `;
 
-const ContentPanel = ({data, side, imgSlider, imgLotate, imgBox}) => {
+const ContentPanel = ({data, side, imgSlider, imgShow, imgBox}) => {
     gsap.registerPlugin(ScrollTrigger);
     return (
         <Wrapper>
             {side ==="left" &&
                 <ImageArea>
                     {imgSlider && <ImageSlider />}
-                    {imgLotate && <ImageLotate data={data}/>}
+                    {imgShow && <ImageShow data={data}/>}
                     {imgBox && <MediaBox data={data}/>}
                 </ImageArea>
             }
@@ -39,7 +40,7 @@ const ContentPanel = ({data, side, imgSlider, imgLotate, imgBox}) => {
             {side ==="right" &&
                 <ImageArea>
                     {imgSlider && <ImageSlider />}
-                    {imgLotate && <ImageLotate data={data}/>}
+                    {imgShow && <ImageShow data={data}/>}
                     {imgBox && <MediaBox data={data}/>}
                 </ImageArea>
             }

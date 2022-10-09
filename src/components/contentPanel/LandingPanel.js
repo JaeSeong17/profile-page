@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef} from "react";
 import { gsap } from "gsap";
 
 const Wrapper = styled.div`
@@ -45,7 +45,6 @@ const Screen = styled.div`
 `;
 
 const LandingTextBox = () => {
-    const [landing, setLanding] = useState(true);
     const title = '기우제는 실패하지 않는다';
     const splitTitle = "<div>" + title.split("").join("</div><div>&nbsp;</div><div>") + "</div>";
     const titleRef = useRef();
