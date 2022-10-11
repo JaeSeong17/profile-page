@@ -42,6 +42,7 @@ const DetailTextWrapper = styled.div`
 `;
 
 const ProfileContainer = () => {
+    // TO-DO : Json으로 뽑아내자
     const expers = [
         '교내 프로젝트 - PHM, Offline_Chat',
         '인도 인턴쉽 - WebOS',

@@ -24,12 +24,6 @@ const Wrapper = styled.div`
             right: 0;
         }
     }
-    /* &:nth-child(1) {
-        top: 10%;
-    }
-    &:nth-child(2) {
-        top: 60%;
-    } */
 `;
 
 const ImageShow = ({data}) => {

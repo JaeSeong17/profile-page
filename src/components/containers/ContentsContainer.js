@@ -1,7 +1,5 @@
 import ContentPanel from "../contentPanel/ContentPanel";
-import { useRef } from "react";
 import data from '../../static/data/mainData.json'
-import VideoContentPanel from "../contentPanel/VideoContentPanel";
 import styled from "styled-components";
 
 const Wrapper = styled.div`

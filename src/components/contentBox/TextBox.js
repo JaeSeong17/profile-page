@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import Button from "../common/Button";
+import LinkButton from "../common/LinkButton";
 
 const Wrapper = styled.div`
     display: block;
@@ -45,7 +45,7 @@ const TextBox = ({data}) => {
             {data.text.map((line, index) => (
                 <div key={index}>- {line}</div>
             ))}
-            <div>{data.github && <Button text="To Git" path={data.github}/>}</div>
+            <div><LinkButton text="Detail" path={data.key}/></div>
         </Wrapper>
     );
 }

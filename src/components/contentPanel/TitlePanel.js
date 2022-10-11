@@ -42,7 +42,7 @@ const TitleBox = () => {
     const pathRef = useRef();
     const svgRef = useRef();
     const wrapperRef = useRef();
-    const textRef1 = useRef();
+    const textRef1 = useRef();      // 배열로 변경 할수 있을듯
     const textRef2 = useRef();
     const textRef3 = useRef();
     const textRef4 = useRef();

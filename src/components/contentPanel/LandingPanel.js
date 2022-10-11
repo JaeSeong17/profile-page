@@ -44,7 +44,7 @@ const Screen = styled.div`
     transform: translate(0, 1.5rem);
 `;
 
-const LandingTextBox = () => {
+const LandingPanel = () => {
     const title = '기우제는 실패하지 않는다';
     const splitTitle = "<div>" + title.split("").join("</div><div>&nbsp;</div><div>") + "</div>";
     const titleRef = useRef();
@@ -94,4 +94,4 @@ const LandingTextBox = () => {
     )
 }
 
-export default LandingTextBox;
+export default LandingPanel;
