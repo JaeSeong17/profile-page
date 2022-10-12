@@ -52,6 +52,11 @@ const TitleBox = () => {
     // react 에서 gsap 애니메이션 사용시 useEffect로 랜더링 시점에 애니메이션 호출 해주어야 적상 작동됨
     // DOM elem 에 접근은 useRef으로 가능
     useEffect(() => {
+        gsap.from(wrapperRef.current, {
+            autoAlpha:0,
+            duration: 1
+        })
+
         // 텍스트 애니메이션
         const pulses = gsap.timeline({
             // 전체 텍스트에 동일하게 줄 속성 설정

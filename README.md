@@ -13,6 +13,10 @@ LandingPage, MainPage, ProjectDetailPage 등으로 구상중입니다.
 - ImageSlider 구현 완료 - 어플리케이션 UI 보여주는 용도
 
 
+#### bug-fix
+- react require에 동적으로 image path를 전달시 오류 발생
+
+
 ## GSAP - 애니메이션 라이브러리
 ### ScrollTrigger
 

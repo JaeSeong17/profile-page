@@ -2,21 +2,33 @@
     {
         "title": "Petmily",
         "subtitle": "SJSU Software Technology and Innovation Program",
-        
-        "summary": "창업 아이디어 설계 및 비즈니스 모델 수립부터 어플리케이션 제작과정까지 경험해본 프로그램",
-        "detail": [
-            [
-                "1달간의 프로젝트",
-                "짧은 기간을 고려하여 Flutter 선택",
-                "Scrum 방식 진행 취지에서 매일 짧은 미팅, 진행상황을 공유",
-                "어플리케이션 디자인(Figma)과 프론트 엔드 담당"
+        "date": "2022.01",
+        "summary": "산호세 주립대학 프로그램, 창업 아이디어와 비즈니스 모델 설계부터 어플리케이션 제작과정까지를 포함한 프로젝트를 진행합니다.",
+        "detail": {
+            "explain": [
+                "반려동물이 특정 사료에 대한 호불호를 보이는 것에 착안",
+                "반려동물의 기호와 영양소를 고려한 맞춤 사료 추천 서비스"
             ],
-            [
-                ""
+            "skill": [
+                "UI 디자인 및 앱 프론트 부분을 담당",
+                "UI 디자인 - Figma / 어플리케이션 개발 - Flutter",
+                "MySQL 백엔드와 연동"
+            ],
+            "process": [
+                "1달간 프로그램 진행, 월~금 오전 SW 교육(09:00~12:00), 이후 팀 프로젝트",
+                "Scrum 방식을 적용해보자는 목표로 SW 교육 이후 짧은 미팅(1~2시간) 진행",
+                "프로젝트 방향 수정과 개발 현황, 어려움에 대해 공유하고 당일 개발 계획 세우기"
+            ],
+            "review": [
+                "어플리케이션 개발을 처음 경험해본 프로젝트",
+                "아이템 정보 박스를 재사용 할 수 있도록 재구성 하는 과정",
+                "같은 부분을 작업 -> 코드 가독성을 고려",
+                "백엔드와 연동이 완전히 마무리되지 않아 이후 개선해볼 필요가 있음"
             ]
-        ],
+        },
         "imagePath": "static/images/petmilys/petmily",
-        "github": "https://github.com/Beyond-Six/Petmily_Flutter"
+        "github": "https://github.com/Beyond-Six/Petmily_Flutter",
+        "report": null
     }
 
 ]
