@@ -71,7 +71,7 @@ const ProfileContainer = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: nameRef.current,
-                toggleActions: "restart none none reset",
+                toggleActions: "play none none none",
             }
         })
 

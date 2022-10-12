@@ -26,7 +26,7 @@ const TextBox = ({data}) => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: wrapRef.current,
-                toggleActions: "restart none none none",
+                toggleActions: "play none none none",
             }
         })
         tl.from(wrapGsap("div"), {

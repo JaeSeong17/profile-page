@@ -24,7 +24,7 @@ const MediaBox = ({data}) => {
         gsap.from(wrapRef.current, {
             scrollTrigger:{
                 trigger: wrapRef.current,
-                toggleActions: "restart none none reset"
+                toggleActions: "play none none none"
             },
             opacity: 0,
             duration: 2

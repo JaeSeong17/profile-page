@@ -33,7 +33,7 @@ const ImageShow = ({data}) => {
         gsap.from(wrapGsap("img"), {
             scrollTrigger: {
                 trigger: wrapRef.current,
-                toggleActions: "restart none none reset"
+                toggleActions: "play none none none"
             },
             autoAlpha: 0,
             duration: 1.5,
