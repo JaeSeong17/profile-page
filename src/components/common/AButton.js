@@ -4,10 +4,11 @@ import palette from "../../lib/styles/palette";
 const Wrapper = styled.a`
     button {
         background-color: ${palette.gray[6]};
-        height: 2rem;
         border-radius: 0.5rem;
         border: 0px;
         color: white;
+        font-size: 1.2rem;
+        padding: 0.5rem;
 
         &:hover {
         background-color: ${palette.gray[8]};
