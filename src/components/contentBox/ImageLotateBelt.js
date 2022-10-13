@@ -40,6 +40,7 @@ const ImageLotateBelt = forwardRef(({data}, ref) => {
                     duration: 50,
                     ease: 'none'
             }).progress(i%beltRef.current.children.length/beltRef.current.children.length)
+            return null
         })
     }, [])
     

@@ -78,7 +78,7 @@ const LandingPanel = () => {
                 duration: 1
             });
         }, 3000);
-    }, [])
+    }, [titleGsap])
 
     return (
         <Wrapper ref={wrapperRef}>

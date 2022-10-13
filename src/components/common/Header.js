@@ -8,12 +8,6 @@ const Wrapper = styled.div`
     position: relative;
 `;
 
-const Volet = styled.div`
-    height: 100%;
-    width: 100vh;
-    position: absolute;
-
-`;
 
 const Header = () => {
     return(

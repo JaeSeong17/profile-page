@@ -6,11 +6,15 @@ import WebOSPage from 'pages/WebOSPage';
 import PHMPage from 'pages/PHMPage';
 import OffchatPage from 'pages/OffchatPage';
 import UnityGamePage from 'pages/UnityGamePage';
+import {Helmet} from 'react-helmet-async';
 
 
 function App() {
   return (
     <>
+      <Helmet>
+        <title>기우제는 실패하지 않는다</title>
+      </Helmet>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/petmily" element={<PetmilyPage />} />

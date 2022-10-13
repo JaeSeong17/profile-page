@@ -25,6 +25,7 @@ LandingPage, MainPage, ProjectDetailPage 등으로 구상중입니다.
 
 ##### 2022-10-13
 - forwardRef로 부모 컴포넌트에서 자식 컴포넌트 내부 DOM element에 접근할 수 있음
+- HelmetProvider로 title을 설정
 
 
 

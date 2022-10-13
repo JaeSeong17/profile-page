@@ -117,8 +117,7 @@ const ImageSlider = () => {
         }
     }
 
-    let currentImg = undefined,
-        delayedPlay;
+    let currentImg = undefined, delayedPlay;
 
     useEffect(() => {
         lanesRef.current.map( (lane, i) => {
@@ -148,7 +147,9 @@ const ImageSlider = () => {
                         ease:'none'
                     }
                 ).progress(((i*4)+j)%4/4);      // 애니메이션 진행도를 설정할 수 있음
+                return null
             })
+            return null;
         }, [])
         
         // 초기 애니메이션 세팅 - fade in
@@ -172,10 +173,12 @@ const ImageSlider = () => {
                     if (delayedPlay) delayedPlay.kill();
                     pauseBoxes(e.currentTarget);
                     let _t = e.currentTarget;
-                    gsap.to(img, {duration:0.2,  overwrite:'auto', opacity:function(i,t){return (t==_t)? 1:0.33 }});
+                    gsap.to(img, {duration:0.2,  overwrite:'auto', opacity:function(i,t){return (t===_t)? 1:0.33 }});
                     gsap.fromTo(_t,      {zIndex:100}, {duration:0.2, scale:0.44, overwrite:'auto', ease:'power3'});
             }); 
+            return null;
             }) 
+            return null;
         });
 
         lanesRef.current.map((lane) => {
@@ -184,16 +187,19 @@ const ImageSlider = () => {
                     if (currentImg) return;    
                     let _t = e.currentTarget;
                     
-                    if (gsap.getProperty(_t, 'scale')>0.62) delayedPlay = gsap.delayedCall(0.3, playBoxes); // to avoid jump, add delay when mouseout occurs as big image scales back down (not 100% reliable because the scale value sometimes evaluates too late)
-                    else playBoxes();
+                    // if (gsap.getProperty(_t, 'scale')>0.62) delayedPlay = gsap.delayedCall(0.3, playBoxes); // to avoid jump, add delay when mouseout occurs as big image scales back down (not 100% reliable because the scale value sometimes evaluates too late)
+                    // else playBoxes();
+                    playBoxes();
                     gsap.timeline()
                         .set(_t, {zIndex:1})
                         .to(_t, {duration:0.3, scale:0.38, overwrite:'auto', ease:'expo'}, 0)
                         .to(img, {duration:0.5, opacity:1, ease:'power2.inOut'}, 0);
                 });
+                return null;
             })
+            return null;
         })
-    }, []);
+    });
 
     return (
         <Wrapper ref={wrapperRef}>

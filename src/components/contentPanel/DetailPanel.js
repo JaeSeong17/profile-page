@@ -56,7 +56,7 @@ const DetailPanel = ({data}) => {
         });
         
         
-    },[])
+    },[titleGsap, beltRef, subGsap, textGsap])
 
     return (
         <Wrapper>
