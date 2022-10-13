@@ -62,7 +62,7 @@
         },
         "imagePath": "static/images/webos/webos",
         "github": null,
-        "report": "static/report/SWConv2_Service_FinalReport.pdf"
+        "report": null
     },
     {
         "title": "PHM",
