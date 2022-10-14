@@ -2,7 +2,6 @@ import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 import gsap from "gsap";
 import { ScrollTrigger} from "gsap/ScrollTrigger";
-import DrawSVGPlugin from "gsap-trial/DrawSVGPlugin";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import React, { useEffect, useRef } from "react";
 
@@ -36,7 +35,7 @@ const SvgContainer = styled.svg`
 
 
 const TitleBox = () => {
-    gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);    // 플러그인 사용시 등록
+    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);    // 플러그인 사용시 등록
     gsap.defaults({ease: "none"});
     const circleRef = useRef();
     const pathRef = useRef();

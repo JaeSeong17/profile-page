@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import gsap from "gsap";
 import palette from "lib/styles/palette";
-import DrawSVGPlugin from "gsap-trial/DrawSVGPlugin";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import { useRef, useEffect } from "react";
 
@@ -14,17 +13,13 @@ const Wrapper = styled.svg`
 `;
 
 const Introline = () => {
-    gsap.registerPlugin(DrawSVGPlugin,MotionPathPlugin);
+    gsap.registerPlugin(MotionPathPlugin);
     const lineRef = useRef();
     const circleRef = useRef();
     useEffect(() => {
         const tl = gsap.timeline();
         
-        tl.from(lineRef.current, {
-            drawSVG: 0,
-            duration: 2
-        }, 0)
-        .to(circleRef.current, {
+        tl.to(circleRef.current, {
             motionPath: {
                 path: lineRef.current,
                 align: lineRef.current,

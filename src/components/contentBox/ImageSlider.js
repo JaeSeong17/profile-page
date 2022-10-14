@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     justify-items: center;
     /* background-color: ${palette.red[2]}; */
     width:100%;
-    height:100%;
+    height:80%;
     /* max-height:880px; */
     /* background:#000; */
 `;

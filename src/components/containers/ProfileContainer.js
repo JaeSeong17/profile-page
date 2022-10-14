@@ -19,10 +19,10 @@ const Wrapper = styled.div`
 
 const TextList = styled.div`
     .name {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .field {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .sub {
         font-size: 1.5rem;
@@ -32,13 +32,11 @@ const TextList = styled.div`
     }
 `;
 const DetailTextWrapper = styled.div`
+    justify-content: space-between;
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
     & > * {
         width: 50%;
     }
-    
 `;
 
 const ProfileContainer = () => {
@@ -47,8 +45,7 @@ const ProfileContainer = () => {
         '교내 프로젝트 - PHM, Offline_Chat',
         '인도 인턴쉽 - WebOS',
         'SJSU educate program - Petmily',
-        '교내 수업 보조 (C, Python, R)',
-        '모던 자바스크립트, 리액트를 다루는 기술',
+        '교내 수업 보조 (C, Python, R)'
     ];
     const techs = [
         'HTML, CSS, JavaScript (인도 인턴쉽, 교내 프로젝트)',
@@ -61,12 +58,12 @@ const ProfileContainer = () => {
 
     gsap.registerPlugin(ScrollTrigger);
     const nameRef = useRef();
-    const leftListRef = useRef();
-    const rightListRef = useRef();
+    const expListRef = useRef();
+    const skillListRef = useRef();
 
     const nameGsap = gsap.utils.selector(nameRef);
-    const leftListGsap = gsap.utils.selector(leftListRef);
-    const rightListGsap = gsap.utils.selector(rightListRef);
+    const expListGsap = gsap.utils.selector(expListRef);
+    const skillListGsap = gsap.utils.selector(skillListRef);
     useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -79,40 +76,40 @@ const ProfileContainer = () => {
             opacity: 0,
             stagger: 0.3,
         })
-        .from(leftListGsap("div"), {
+        .from(skillListGsap("div"), {
             y: 100,
             opacity: 0,
             stagger: 0.1,
         })
-        .from(rightListGsap("div"), {
+        .from(expListGsap("div"), {
             y: 100,
             opacity: 0,
             stagger: 0.1,
         });
-    }, [nameGsap, leftListGsap, rightListGsap])
+    }, [nameGsap, skillListGsap, expListGsap])
 
 
 
     return (
         <Wrapper>
             <TextList ref={nameRef}>
-                <div className="name">안재성</div>
-                <div className="field">프론트 엔드 개발자 지망</div>
+                <div className="name"><h1>안재성</h1></div>
+                <div className="field"><h3>프론트 엔드 개발자 지망</h3></div>
                 <div><hr /></div>
                 <div>컴퓨터 학부를 졸업했지만 막상 할줄 아는게 없는것 같은 걱정에</div>
                 <div>뭐라도 해보자는 취지에서 만드는 페이지</div>
             </TextList>
-            <DetailTextWrapper>
-                <TextList ref={leftListRef}>
-                    <div className="sub">나의 경험들</div>
-                    {expers.map(exper => (
-                        <div key={exper}>{exper}</div>
-                    ))}
-                </TextList>
-                <TextList ref={rightListRef}>
-                    <div className="sub">사용해본 언어</div>
+            <DetailTextWrapper className="responsive">
+                <TextList ref={skillListRef}>
+                    <div className="sub"><h5>사용해본 기술</h5></div>
                     {techs.map(tech => (
                         <div key={tech}>{tech}</div>
+                    ))}
+                </TextList>
+                <TextList ref={expListRef}>
+                    <div className="sub"><h5>나의 경험들</h5></div>
+                    {expers.map(exper => (
+                        <div key={exper}>{exper}</div>
                     ))}
                 </TextList>
             </DetailTextWrapper>

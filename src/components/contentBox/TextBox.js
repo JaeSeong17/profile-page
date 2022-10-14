@@ -39,7 +39,7 @@ const TextBox = ({data}) => {
     return (
         <Wrapper ref={wrapRef}>
             <Title>
-                {data.title}    
+                <h4>{data.title}</h4>  
             </Title>
             <div><hr /></div>
             {data.text.map((line, index) => (

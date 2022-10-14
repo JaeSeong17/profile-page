@@ -13,7 +13,8 @@ const Wrapper = styled.div`
         margin: 0;
         padding: 0;
         width: 80%;
-        height: auto;
+        height: 14rem;
+        object-fit: cover;
         border-radius: 1rem;
         box-shadow: 0px 0px 40px rgba(0,0,10,0.25); 
         &:nth-child(1) {

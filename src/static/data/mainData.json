@@ -4,7 +4,7 @@
         "title": "Petmily - SJSU SW program",
         "text": [
             "반려동물 기호 맞춤 사료 추천 서비스",
-            "Flutter",
+            "Flutter, Figma",
             "어플리케이션 프론트 엔드 담당"
         ],
         "mediaPath" : null,
@@ -16,9 +16,7 @@
         "text": [
             "사물감지를 활용한 '필요 물품 확인 시스템'",
             "tensorflow.js(YOLO model), Python",
-            "모델 사용 및 프론트와 연동",
-            "Raspberri pi 4에 WebOS설치, 웹앱이 동작 가능하여 스크립트 기반 프로젝트 기획",
-            "외출시 문에 설치된 카메라를 통해 등록된 체크 리스트 확인후 사용자에게 알림"
+            "모델 사용 및 프론트와 연동"
         ],
         "mediaPath" : "static/images/webos/Produce.mp4",
         "github": null
@@ -40,7 +38,8 @@
         "title": "Offline Chatting - 교내 프로젝트",
         "text": [
             "근거리 통신 채팅 시스템",
-            "react 사용, 프론트엔드 담당"
+            "React, C++",
+            "프론트엔드 및 백엔드와 연동"
         ],
         "mediaPath" : null,
         "imgPath": "static/images/offchat/",
@@ -52,7 +51,7 @@
         "text": [
             "게임이 만들어보고 싶어서 해보는 개인 개발",
             "Unity, C#, Aseprite",
-            "소울 형 로그라이크 게임"
+            "로그라이크 게임 기획"
         ],
         "mediaPath" : "static/images/unityGame/unityGame.mp4",
         "github": "https://github.com/JaeSeong17/unity_project"

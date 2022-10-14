@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     display: block;
+    padding: 0 4rem 0 4rem;
     ul {
         padding:0;
         margin-bottom: 3rem;

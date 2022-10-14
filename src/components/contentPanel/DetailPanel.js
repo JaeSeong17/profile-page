@@ -5,13 +5,18 @@ import ImageLotateBelt from "components/contentBox/ImageLotateBelt";
 import DetailTextBox from "components/contentBox/DetailTextBox";
 
 const Wrapper = styled.div`    
+    width: 100%;
     ul{
         padding-left: 1rem;
-        margin: auto;
+        margin: 0 auto;
     }
     li {
         margin-bottom: 1.5rem;
     }
+`;
+
+const TitleArea = styled.div`
+    padding: 0 4rem 0 4rem;
 `;
 
 const ContentArea = styled.div`
@@ -60,12 +65,14 @@ const DetailPanel = ({data}) => {
 
     return (
         <Wrapper>
-            <h1 ref={titleRef} dangerouslySetInnerHTML={{__html: splitTitle}} style={{display: "flex"}} />
-            <div ref={subRef}>
-                <div><h2>{data.subtitle}</h2></div>
-                <div><hr /></div>
-                <div><h4>{data.summary}</h4></div>
-            </div>
+            <TitleArea>
+                <h1 ref={titleRef} dangerouslySetInnerHTML={{__html: splitTitle}} style={{display: "flex"}} />
+                <div ref={subRef}>
+                    <div><h2>{data.subtitle}</h2></div>
+                    <div><hr /></div>
+                    <div><h4>{data.summary}</h4></div>
+                </div>
+            </TitleArea>
             <ContentArea>
                 <ImageLotateBelt ref={beltRef} data={data} />
                 <DetailTextBox ref={textRef} data={data} />

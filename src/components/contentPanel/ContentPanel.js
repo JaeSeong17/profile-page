@@ -23,12 +23,13 @@ const ImageArea = styled.div`
     align-items: center;
     height: 30rem;
     width: 32rem;
+    margin: 0 auto;
 `;
 
 const ContentPanel = ({data, side, imgSlider, imgShow, imgBox}) => {
     gsap.registerPlugin(ScrollTrigger);
     return (
-        <Wrapper>
+        <Wrapper className="responsive">
             {side ==="left" &&
                 <ImageArea>
                     {imgSlider && <ImageSlider />}
