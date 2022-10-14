@@ -34,6 +34,9 @@ const Footer = () => {
                 <li>
                     2022 하반기 지원 포트폴리오
                 </li>
+                <li>
+                    Github link : <a href="https://github.com/JaeSeong17/profile-page">github.com/JaeSeong17/profile-page</a>
+                </li>
             </ul>
         </Wrapper>
     )
