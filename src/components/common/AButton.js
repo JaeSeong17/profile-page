@@ -16,13 +16,24 @@ const Wrapper = styled.a`
     }
 `;
 
-const AButton = ({text, path}) => {
+const AButton = ({text, path, report}) => {
     return (
-        <Wrapper href={path}>
-            <button>
-                {text}
-            </button>
-        </Wrapper>
+        <>
+            {report ? (
+                    <Wrapper href={require("../../" + path)}>
+                        <button>
+                            {text}
+                        </button>
+                    </Wrapper>
+                ) : (
+                    <Wrapper href={path}>
+                        <button>
+                            {text}
+                        </button>
+                    </Wrapper>
+                ) 
+            }
+        </>
     )
 }
 

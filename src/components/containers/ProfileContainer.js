@@ -18,15 +18,6 @@ const Wrapper = styled.div`
 `;
 
 const TextList = styled.div`
-    .name {
-        font-size: 2rem;
-    }
-    .field {
-        font-size: 1.5rem;
-    }
-    .sub {
-        font-size: 1.5rem;
-    }
     & > * {
         margin: 2rem;
     }

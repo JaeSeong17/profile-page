@@ -48,7 +48,7 @@ const DetailTextBox = forwardRef(({data}, ref) => {
             </ul>
             <ButtonWrapper>
                 {data.github && <div><AButton text="Github Link" path={data.github} /></div>}
-                {data.report && <div><AButton text="Report" path={data.report} /></div>}
+                {data.report && <div><AButton text="Report" path={data.report} report/></div>}
             </ButtonWrapper>
         </Wrapper>
     )

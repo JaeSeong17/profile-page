@@ -27,6 +27,12 @@ LandingPage, MainPage, ProjectDetailPage 등으로 구상중입니다.
 - forwardRef로 부모 컴포넌트에서 자식 컴포넌트 내부 DOM element에 접근할 수 있음
 - HelmetProvider로 title을 설정
 
+##### 2022-10-14
+- github hosting 으로 배포 시도
+- gsap DrawSVGPlugin 라이센스 문제로 배포 실패 -> 유료 플러그인인지 확인 필요
+- 모바일 환경에서 확인시 반응형 화면 제대로 표현 안됨, 가로로 좌우 배치되어 있는 컴포넌트 상하로 바꿔주는 작업 필요
+
+
 
 
 ## GSAP - 애니메이션 라이브러리
