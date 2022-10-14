@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     & > div {
-        padding-top: 10rem;
-        padding-bottom: 10rem;
-        margin-bottom: 20rem;
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+        margin-bottom: 15rem;
     }
 `;
 

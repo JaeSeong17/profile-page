@@ -18,7 +18,7 @@
             "tensorflow.js(YOLO model), Python",
             "모델 사용 및 프론트와 연동"
         ],
-        "mediaPath" : "static/images/webos/Produce.mp4",
+        "mediaPath" : "static/images/webos/webos.gif",
         "github": null
     },
     {
@@ -53,7 +53,7 @@
             "Unity, C#, Aseprite",
             "로그라이크 게임 기획"
         ],
-        "mediaPath" : "static/images/unityGame/unityGame.mp4",
+        "mediaPath" : "static/images/unityGame/unityGame.gif",
         "github": "https://github.com/JaeSeong17/unity_project"
     },
     {

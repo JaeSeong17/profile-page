@@ -14,10 +14,6 @@ const Wrapper = styled.div`
     }
 `;
 
-const Title = styled.div`
-    font-size: 1.5rem;
-`;
-
 const TextBox = ({data}) => {
     const wrapRef = useRef();
     const wrapGsap = gsap.utils.selector(wrapRef);
@@ -38,9 +34,7 @@ const TextBox = ({data}) => {
 
     return (
         <Wrapper ref={wrapRef}>
-            <Title>
-                <h4>{data.title}</h4>  
-            </Title>
+            <div><h3>{data.title}</h3></div>
             <div><hr /></div>
             {data.text.map((line, index) => (
                 <div key={index}>- {line}</div>

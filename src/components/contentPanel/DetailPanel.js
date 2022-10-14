@@ -38,26 +38,26 @@ const DetailPanel = ({data}) => {
     useEffect(() => {
         // 제목, 부제목 이미지 애니메이션
         const tl = gsap.timeline()
-        tl.delay(2.5)
+        tl.delay(1.8)
         .from(titleGsap("div"), {
             y: 50,
             autoAlpha:0,
-            stagger: 0.1,
+            stagger: 0.08,
         })
         .from(subGsap("div"), {
             autoAlpha: 0,
-            stagger: 0.1,
+            stagger: 0.08,
         })
         // 이미지 애니메이션
         .from(beltRef.current, {
             autoAlpha: 0,
-            duration: 1
+            duration: 0.5
         })
         // 텍스트 애니메이션
         .from(textGsap("div"), {
             autoAlpha: 0,
-            stagger: 0.2,
-            duration: 1
+            stagger: 0.1,
+            duration: 0.5
         });
         
         
@@ -65,7 +65,7 @@ const DetailPanel = ({data}) => {
 
     return (
         <Wrapper>
-            <TitleArea>
+            <TitleArea className="detailTextArea">
                 <h1 ref={titleRef} dangerouslySetInnerHTML={{__html: splitTitle}} style={{display: "flex"}} />
                 <div ref={subRef}>
                     <div><h2>{data.subtitle}</h2></div>

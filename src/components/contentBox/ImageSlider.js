@@ -202,7 +202,7 @@ const ImageSlider = () => {
     });
 
     return (
-        <Wrapper ref={wrapperRef}>
+        <Wrapper ref={wrapperRef} className="imgSlider">
                 <MainBoxes ref={mainBoxRef}>
                     {lanes[0].map((img, i) => (
                         <div key={i} ref={el => lanesRef.current[0][i] = el}>

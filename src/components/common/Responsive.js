@@ -16,12 +16,34 @@ const ResponsiveBlock = styled.div`
         .responsive {
             display: block;
             justify-content: center;
-            margin: 0 auto;
+            padding: 0rem;
 
             & > * {
-                width: 80%;
+                width: 100%;
             }
         }
+        .imgArea {
+            height: 24rem;
+            padding: 1rem;
+        }
+        .imgSlider {
+            position: absolute;
+            height: 22rem;
+            width: 34rem;
+            left: 50%;
+            transform: translate(-45%, 0);
+        }
+        .textArea {
+            margin-bottom: 2.4rem;
+            & > div {
+                margin: 1.2rem 0 0 0;
+            } 
+            
+        }
+        .detailTextArea{
+            padding: 0 2rem 0 2rem;
+        }
+        
     }
 `;
 

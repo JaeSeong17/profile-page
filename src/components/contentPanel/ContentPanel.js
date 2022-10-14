@@ -11,10 +11,10 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 600px;
+    min-height: 400px;
     width: 100%;
     margin-bottom: 8rem;
-    padding: 4rem;
+    padding: 1rem;
 `;
 
 const ImageArea = styled.div`
@@ -31,7 +31,7 @@ const ContentPanel = ({data, side, imgSlider, imgShow, imgBox}) => {
     return (
         <Wrapper className="responsive">
             {side ==="left" &&
-                <ImageArea>
+                <ImageArea className="imgArea">
                     {imgSlider && <ImageSlider />}
                     {imgShow && <ImageShow data={data}/>}
                     {imgBox && <MediaBox data={data}/>}
@@ -39,7 +39,7 @@ const ContentPanel = ({data, side, imgSlider, imgShow, imgBox}) => {
             }
             <TextBox data={data} gitBtn={data.github}/>
             {side ==="right" &&
-                <ImageArea>
+                <ImageArea className="imgArea">
                     {imgSlider && <ImageSlider />}
                     {imgShow && <ImageShow data={data}/>}
                     {imgBox && <MediaBox data={data}/>}

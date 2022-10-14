@@ -12,8 +12,8 @@ const Wrapper = styled.div`
     justify-content: space-evenly;
     align-items: center;
     min-height: 80vh;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     /* background-color: ${palette.gray[1]}; */
 `;
 
@@ -65,17 +65,17 @@ const ProfileContainer = () => {
 
         tl.from(nameGsap("div"), {
             opacity: 0,
-            stagger: 0.3,
+            stagger: 0.1
         })
         .from(skillListGsap("div"), {
             y: 100,
             opacity: 0,
-            stagger: 0.1,
+            stagger: 0.05
         })
         .from(expListGsap("div"), {
             y: 100,
             opacity: 0,
-            stagger: 0.1,
+            stagger: 0.05
         });
     }, [nameGsap, skillListGsap, expListGsap])
 
@@ -83,22 +83,22 @@ const ProfileContainer = () => {
 
     return (
         <Wrapper>
-            <TextList ref={nameRef}>
-                <div className="name"><h1>안재성</h1></div>
-                <div className="field"><h3>프론트 엔드 개발자 지망</h3></div>
+            <TextList ref={nameRef} className="textArea">
+                <div><h1>안재성</h1></div>
+                <div><h2>프론트 엔드 개발자 지망</h2></div>
                 <div><hr /></div>
-                <div>컴퓨터 학부를 졸업했지만 막상 할줄 아는게 없는것 같은 걱정에</div>
+                <div>컴퓨터 학부생이지만 막상 할줄 아는게 없는것 같아서</div>
                 <div>뭐라도 해보자는 취지에서 만드는 페이지</div>
             </TextList>
             <DetailTextWrapper className="responsive">
-                <TextList ref={skillListRef}>
-                    <div className="sub"><h5>사용해본 기술</h5></div>
+                <TextList ref={skillListRef} className="textArea">
+                    <div><h3>사용해본 기술</h3></div>
                     {techs.map(tech => (
                         <div key={tech}>{tech}</div>
                     ))}
                 </TextList>
-                <TextList ref={expListRef}>
-                    <div className="sub"><h5>나의 경험들</h5></div>
+                <TextList ref={expListRef} className="textArea">
+                    <div><h3>나의 경험들</h3></div>
                     {expers.map(exper => (
                         <div key={exper}>{exper}</div>
                     ))}

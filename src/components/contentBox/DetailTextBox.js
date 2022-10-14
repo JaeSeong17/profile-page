@@ -22,7 +22,7 @@ const ButtonWrapper = styled.div`
 
 const DetailTextBox = forwardRef(({data}, ref) => {
     return (
-        <Wrapper ref={ref}>
+        <Wrapper ref={ref} className="detailTextArea">
             <ul>
             {data.detail.explain.map((text, i) => (
                 <div key={i}><h4>{text}</h4></div>

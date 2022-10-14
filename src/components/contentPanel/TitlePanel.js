@@ -11,7 +11,6 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin-bottom: 500px;
     /* background-color: ${palette.gray[3]}; */
 `;
 
@@ -41,6 +40,7 @@ const TitleBox = () => {
     const pathRef = useRef();
     const svgRef = useRef();
     const wrapperRef = useRef();
+    const textRef0 = useRef();
     const textRef1 = useRef();      // 배열로 변경 할수 있을듯
     const textRef2 = useRef();
     const textRef3 = useRef();
@@ -60,11 +60,12 @@ const TitleBox = () => {
         const pulses = gsap.timeline({
             // 전체 텍스트에 동일하게 줄 속성 설정
             defaults: {
-                duration: 0.1, 
+                duration: 0.2, 
                 opacity: 0,
                 repeat: 1,  // yoyo 설정시 기본 1을 주어야함
                 yoyo: true  // 반복시 왔다 갔다 옵션으로 주기
             }})
+        .to(textRef0.current, {repeat: 0, yoyo: false}, 0)
         .from(textRef1.current, {}, 0.1)    // 스크롤 애니메이션 진행률에 따른 애니메이션 트리거 설정
         .from(textRef2.current, {}, 0.3)
         .from(textRef3.current, {}, 0.5)
@@ -77,7 +78,7 @@ const TitleBox = () => {
             scrollTrigger: {
                 trigger: wrapperRef.current,
                 start: "0 0",           // 처음 트리거 발생 지점 설정, (컴포넌트 기준점, 스크롤 기준점)
-                end: "+=8000px",        // 애니메이션 종료 지점 컴포넌트, 기준점에서 간격 더해줌
+                end: "+=4000px",        // 애니메이션 종료 지점 컴포넌트, 기준점에서 간격 더해줌
                 scrub: 1,
                 // id: "first",
                 // markers: true,
@@ -101,6 +102,7 @@ const TitleBox = () => {
     return (
         <Wrapper ref={wrapperRef}>
             <SvgContainer ref={svgRef} viewBox="14 0 20 10">
+                <text ref={textRef0} className='text' x="23" y="12">아래로 스크롤</text>
                 <text ref={textRef1} className='text' x="15" y="1.5">어려운 순간은 매번 찾아옵니다</text>
                 <text ref={textRef2} className='text' x="15" y="2.5">이 길이 맞나 헤메기도 합니다</text>
                 <text ref={textRef3} className='text' x="28" y="7.5">하지만 될때까지 하다보면</text>

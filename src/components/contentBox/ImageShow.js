@@ -37,8 +37,8 @@ const ImageShow = ({data}) => {
                 toggleActions: "play none none none"
             },
             autoAlpha: 0,
-            duration: 1.5,
-            stagger: 1.2        
+            duration: 0.5,
+            stagger: 1        
         })
     });
 

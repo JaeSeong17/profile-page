@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0px 0px 40px rgba(0,0,10,0.5); 
-    video {
+    video, img {
         position: absolute;
         width: 30rem;
         top: 50%;
@@ -27,7 +27,7 @@ const MediaBox = ({data}) => {
                 toggleActions: "play none none none"
             },
             opacity: 0,
-            duration: 2
+            duration: 1
         })
     }, [wrapRef]);
 
