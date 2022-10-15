@@ -30,6 +30,9 @@ const SvgContainer = styled.svg`
     .text{
         font-size: 0.03rem;
     }
+    .scroll {
+        font-size: 0.02rem;
+    }
 `;
 
 
@@ -40,13 +43,7 @@ const TitleBox = () => {
     const pathRef = useRef();
     const svgRef = useRef();
     const wrapperRef = useRef();
-    const textRef0 = useRef();
-    const textRef1 = useRef();      // 배열로 변경 할수 있을듯
-    const textRef2 = useRef();
-    const textRef3 = useRef();
-    const textRef4 = useRef();
-    const textRef5 = useRef();
-
+    const textRef = useRef([]);
 
     // react 에서 gsap 애니메이션 사용시 useEffect로 랜더링 시점에 애니메이션 호출 해주어야 적상 작동됨
     // DOM elem 에 접근은 useRef으로 가능
@@ -65,12 +62,12 @@ const TitleBox = () => {
                 repeat: 1,  // yoyo 설정시 기본 1을 주어야함
                 yoyo: true  // 반복시 왔다 갔다 옵션으로 주기
             }})
-        .to(textRef0.current, {repeat: 0, yoyo: false}, 0)
-        .from(textRef1.current, {}, 0.1)    // 스크롤 애니메이션 진행률에 따른 애니메이션 트리거 설정
-        .from(textRef2.current, {}, 0.3)
-        .from(textRef3.current, {}, 0.5)
-        .from(textRef4.current, {}, 0.7)
-        .from(textRef5.current, {}, 0.9)
+        .to([textRef[0],textRef[1]], {repeat: 0, yoyo: false}, 0)
+        .from(textRef[2], {}, 0.1)    // 스크롤 애니메이션 진행률에 따른 애니메이션 트리거 설정
+        .from(textRef[3], {}, 0.3)
+        .from(textRef[4], {}, 0.5)
+        .from(textRef[5], {}, 0.7)
+        .from(textRef[6], {}, 0.9)
 
 
         // 경로 이동 애니메이션
@@ -102,22 +99,24 @@ const TitleBox = () => {
     return (
         <Wrapper ref={wrapperRef}>
             <SvgContainer ref={svgRef} viewBox="14 0 20 10">
-                <text ref={textRef0} className='text' x="23" y="12">아래로 스크롤</text>
-                <text ref={textRef1} className='text' x="15" y="1.5">어려운 순간은 매번 찾아옵니다</text>
-                <text ref={textRef2} className='text' x="15" y="2.5">이 길이 맞나 헤메기도 합니다</text>
-                <text ref={textRef3} className='text' x="28" y="7.5">하지만 될때까지 하다보면</text>
-                <text ref={textRef4} className='text' x="28" y="8.5">또 다시 나아갈 수 있겠죠</text>
-                <text ref={textRef5} className='text' x="21.5" y="10">기우제는 실패하지 않으니까요</text>
+                <text ref={tr => textRef[0] = tr} className='text' x="23" y="12">새로운 여정</text>
+                <text ref={tr => textRef[1] = tr} className='text scroll' x="23.22" y="12.7">아래로 스크롤</text>
+                <text ref={tr => textRef[2] = tr} className='text' x="15" y="1.5">어려운 순간은 매번 찾아옵니다</text>
+                <text ref={tr => textRef[3] = tr} className='text' x="15" y="2.5">이 길이 맞나 헤메기도 합니다</text>
+                <text ref={tr => textRef[4] = tr} className='text' x="28" y="7.5">하지만 될때까지 하다보면</text>
+                <text ref={tr => textRef[5] = tr} className='text' x="28" y="8.5">또 다시 나아갈 수 있겠죠</text>
+                <text ref={tr => textRef[6] = tr} className='text' x="21.5" y="10">기우제는 실패하지 않으니까요</text>
                 <path 
                     ref={pathRef}
                     className='line'
                     d="m 0.036 5.029
-                    C 32.5 6.25 17.5 -1.25 22.5 5 C 26.25
-                    10 27.5 3.75 23.75 1.25 C 20 0 32.5
-                    13.75 21.25 7.5 C 18.75 5 33.75 6.25
-                    26.25 3.75 C 20 2.5 15 2.5 26.25 8.75
-                    C 28.75 10 21.25 1.25 26.25 2.5 C 31.25
-                    5 36.25 5 49.979 4.999"/>
+                        C 32.5 6.25 17.5 -1.25 22.5 5 C 26.25
+                        10 27.5 3.75 23.75 1.25 C 20 0 32.5
+                        13.75 21.25 7.5 C 18.75 5 33.75 6.25
+                        26.25 3.75 C 20 2.5 15 2.5 26.25 8.75
+                        C 28.75 10 21.25 1.25 26.25 2.5 C 31.25
+                        5 36.25 5 49.979 4.999"
+                />
                 <circle ref={circleRef} r="0.3" fill={palette.red[7]} />
             </SvgContainer>
         </Wrapper>

@@ -38,7 +38,7 @@ const DetailPanel = ({data}) => {
     useEffect(() => {
         // 제목, 부제목 이미지 애니메이션
         const tl = gsap.timeline()
-        tl.delay(1.8)
+        tl.delay(1)
         .from(titleGsap("div"), {
             y: 50,
             autoAlpha:0,

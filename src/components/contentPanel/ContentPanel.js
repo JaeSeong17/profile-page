@@ -15,6 +15,7 @@ const Wrapper = styled.div`
     width: 100%;
     margin-bottom: 8rem;
     padding: 1rem;
+    overflow: hidden;
 `;
 
 const ImageArea = styled.div`
