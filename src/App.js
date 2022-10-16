@@ -6,7 +6,9 @@ import WebOSPage from 'pages/WebOSPage';
 import PHMPage from 'pages/PHMPage';
 import OffchatPage from 'pages/OffchatPage';
 import UnityGamePage from 'pages/UnityGamePage';
+import ThreeTestPage from 'pages/ThreeTestPage';
 import {Helmet} from 'react-helmet-async';
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
         <Route path="/phm" element={<PHMPage />} />
         <Route path="/offchat" element={<OffchatPage />} />
         <Route path="/unitygame" element={<UnityGamePage />} />
+        <Route path="/three" element={<ThreeTestPage />} />
       </Routes>
     </>
   );
