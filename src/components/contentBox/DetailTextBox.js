@@ -1,6 +1,7 @@
 import AButton from 'components/common/AButton';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
+import React from 'react';
 
 const Wrapper = styled.div`
   display: block;
@@ -75,5 +76,6 @@ const DetailTextBox = forwardRef(({ data }, ref) => {
     </Wrapper>
   );
 });
+DetailTextBox.displayName = 'DetailTextBox';
 
 export default DetailTextBox;

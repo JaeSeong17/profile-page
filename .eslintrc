@@ -7,7 +7,7 @@
     "plugin:react/recommended"
   ],
   "rules": {
-    "react/prop-types": false,
+    "react/prop-types": 0,
     "linebreak-style": ["error", "windows"],
     "prettier/prettier": [
       "error",
@@ -28,5 +28,9 @@
       "version": "detect",
       "requireConfigFile": false
     }
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }

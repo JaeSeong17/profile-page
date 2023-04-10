@@ -5,6 +5,7 @@ import ImageSlider from '../contentBox/ImageSlider';
 import MediaBox from '../contentBox/MediaBox';
 import TextBox from '../contentBox/TextBox';
 import ImageShow from 'components/contentBox/ImageShow';
+import React from 'react';
 
 const Wrapper = styled.div`
   position: relative;

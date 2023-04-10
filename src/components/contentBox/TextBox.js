@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import LinkButton from '../common/LinkButton';
+import React from 'react';
 
 const Wrapper = styled.div`
   display: block;

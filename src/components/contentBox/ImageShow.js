@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
+import React from 'react';
 
 const Wrapper = styled.div`
   width: 100%;

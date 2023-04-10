@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import React from 'react';
 
 const Wrapper = styled.div`
   position: relative;

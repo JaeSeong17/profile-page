@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ImageLotateBelt from 'components/contentBox/ImageLotateBelt';
 import DetailTextBox from 'components/contentBox/DetailTextBox';
+import React from 'react';
 
 const Wrapper = styled.div`
   width: 100%;

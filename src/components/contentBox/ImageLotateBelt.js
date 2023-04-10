@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { forwardRef, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import React from 'react';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -80,5 +81,6 @@ const ImageLotateBelt = forwardRef(({ data }, ref) => {
     </Wrapper>
   );
 });
+ImageLotateBelt.displayName = 'ImageLotateBelt';
 
 export default ImageLotateBelt;
