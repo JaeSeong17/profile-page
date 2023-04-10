@@ -11,12 +11,12 @@ const PetmilyPage = () => {
   return (
     <>
       <Helmet>
-        <title>기우제는 실패하지 않는다 - Petmily</title>
+        <title>기우제는 실패하지 않는다 - BlogThree</title>
       </Helmet>
       <ScrollToTop />
       <Introline />
       <Responsive>
-        <DetailPanel data={detail[1]} />
+        <DetailPanel data={detail[0]} />
       </Responsive>
       <Footer />
     </>

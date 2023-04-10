@@ -7,15 +7,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from '../node_modules/react-router-dom/dist/index';
 import { HelmetProvider } from 'react-helmet-async';
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <HelmetProvider>
       <App />
     </HelmetProvider>
-  </BrowserRouter>
+  </BrowserRouter>,
 );
 
 // If you want to start measuring performance in your app, pass a function

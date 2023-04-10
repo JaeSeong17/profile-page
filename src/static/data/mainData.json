@@ -1,69 +1,81 @@
 [
-    {
-        "key": "petmily",
-        "title": "Petmily - SJSU SW program",
-        "text": [
-            "반려동물 기호 맞춤 사료 추천 서비스",
-            "Flutter, Figma",
-            "어플리케이션 프론트 엔드 담당"
-        ],
-        "mediaPath" : null,
-        "github": null
-    },
-    {
-        "key": "webos",
-        "title": "WebOS - India Internship",
-        "text": [
-            "사물감지를 활용한 '필요 물품 확인 시스템'",
-            "tensorflow.js(YOLO model), Python",
-            "모델 사용 및 프론트와 연동"
-        ],
-        "mediaPath" : "static/images/webos/webos.gif",
-        "github": null
-    },
-    {
-        "key": "phm",
-        "title": "PHM - 교내 프로젝트",
-        "text": [
-            "고장 시점을 예측 시스템",
-            "python(tensorflow), c++ 사용, 모델 적용 담당",
-            "실시간으로 데이터를 활용하여 LSTM 모델을 사용"
-        ],
-        "mediaPath": null,
-        "imgPath": "static/images/phm/",
-        "github": "https://github.com/JaeSeong17/PHM_project"
-    },
-    {
-        "key": "offchat",
-        "title": "Offline Chatting - 교내 프로젝트",
-        "text": [
-            "근거리 통신 채팅 시스템",
-            "React, C++",
-            "프론트엔드 및 백엔드와 연동"
-        ],
-        "mediaPath" : null,
-        "imgPath": "static/images/offchat/",
-        "github": "https://github.com/knusslab/SW_Conv2"
-    },
-    {
-        "key": "unityGame",
-        "title": "게임 개발 - Unity",
-        "text": [
-            "게임이 만들어보고 싶어서 해보는 개인 개발",
-            "Unity, C#, Aseprite",
-            "로그라이크 게임 기획"
-        ],
-        "mediaPath" : "static/images/unityGame/unityGame.gif",
-        "github": "https://github.com/JaeSeong17/unity_project"
-    },
-    {
-        "key": 6,
-        "title": "React Toy - blog",
-        "text": [
-            "'리액트를 다루는 기술'을 읽고 따라서 시작해본 토이프로젝트",
-            "블로그 기록 할거 이참에 내 블로그를 만들어 보자"
-        ],
-        "mediaPath" : "",
-        "github": null
-    }
+  {
+    "key": "blogthree",
+    "title": "BlogThree - 개인 프로젝트",
+    "text": [
+      "개인 블로그 개발 프로젝트",
+      "React, Redux/toolkit, Saga, Three.js, gsap",
+      "프론트엔드 전반적인 개발 경험"
+    ],
+    "mediaPath": null,
+    "imgPath": "static/images/blogthree/",
+    "github": "https://github.com/JaeSeong17/blog-three"
+  },
+  {
+    "key": "petmily",
+    "title": "Petmily - SJSU SW program",
+    "text": [
+      "반려동물 기호 맞춤 사료 추천 서비스",
+      "Flutter, Figma",
+      "어플리케이션 프론트 엔드 담당"
+    ],
+    "mediaPath": null,
+    "github": null
+  },
+  {
+    "key": "webos",
+    "title": "WebOS - India Internship",
+    "text": [
+      "사물감지를 활용한 '필요 물품 확인 시스템'",
+      "tensorflow.js(YOLO model), Python",
+      "모델 사용 및 프론트와 연동"
+    ],
+    "mediaPath": "static/images/webos/webos.gif",
+    "github": null
+  },
+  {
+    "key": "phm",
+    "title": "PHM - 교내 프로젝트",
+    "text": [
+      "고장 시점을 예측 시스템",
+      "python(tensorflow), c++ 사용, 모델 적용 담당",
+      "실시간으로 데이터를 활용하여 LSTM 모델을 사용"
+    ],
+    "mediaPath": null,
+    "imgPath": "static/images/phm/",
+    "github": "https://github.com/JaeSeong17/PHM_project"
+  },
+  {
+    "key": "offchat",
+    "title": "Offline Chatting - 교내 프로젝트",
+    "text": [
+      "근거리 통신 채팅 시스템",
+      "React, C++",
+      "프론트엔드 및 백엔드와 연동"
+    ],
+    "mediaPath": null,
+    "imgPath": "static/images/offchat/",
+    "github": "https://github.com/knusslab/SW_Conv2"
+  },
+  {
+    "key": "unityGame",
+    "title": "게임 개발 - Unity",
+    "text": [
+      "게임이 만들어보고 싶어서 해보는 개인 개발",
+      "Unity, C#, Aseprite",
+      "로그라이크 게임 기획"
+    ],
+    "mediaPath": "static/images/unityGame/unityGame.gif",
+    "github": "https://github.com/JaeSeong17/unity_project"
+  },
+  {
+    "key": 6,
+    "title": "React Toy - blog",
+    "text": [
+      "'리액트를 다루는 기술'을 읽고 따라서 시작해본 토이프로젝트",
+      "블로그 기록 할거 이참에 내 블로그를 만들어 보자"
+    ],
+    "mediaPath": "",
+    "github": null
+  }
 ]
