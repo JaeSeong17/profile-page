@@ -16,7 +16,9 @@ const Wrapper = styled.div`
   margin-bottom: 4rem;
   /* background-color: ${palette.gray[1]}; */
 `;
-
+const ProfileHead = styled.div`
+  display: flex;
+`;
 const TextList = styled.div`
   & > * {
     margin: 1.5rem;
@@ -105,21 +107,31 @@ const ProfileContainer = () => {
   return (
     <Wrapper>
       <TextList ref={nameRef} className="textArea">
-        <div>
-          <h1>안재성</h1>
-        </div>
-        <div>
-          <h2>프론트 엔드 개발자 지망</h2>
-        </div>
+        <ProfileHead>
+          <img
+            src={require('../../static/images/profileImg.png')}
+            alt={'profileImg'}
+            height="120px"
+            width="100px"
+            style={{
+              borderRadius: '20px',
+              margin: '0 20px 0 20px',
+            }}
+          />
+          <div style={{ display: 'block' }}>
+            <h1>안재성</h1>
+            <h2>프론트 엔드 개발자 지망</h2>
+          </div>
+        </ProfileHead>
         <div>
           <hr />
+          {introduce.map((pg, idx) => (
+            <div key={idx}>
+              <h3>{pg.title}</h3>
+              <div>{pg.contents}</div>
+            </div>
+          ))}
         </div>
-        {introduce.map((pg, idx) => (
-          <div key={idx}>
-            <h3>{pg.title}</h3>
-            <div>{pg.contents}</div>
-          </div>
-        ))}
       </TextList>
       <DetailTextWrapper className="responsive">
         <TextList ref={skillListRef} className="textArea">
